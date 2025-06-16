@@ -20,9 +20,9 @@ export interface BlogPost {
 const blogPostsData: BlogPost[] = [
   {
     id: 1,
-    slug: "future-of-web-development",
-    title: "The Future of Web Development: Trends to Watch in 2024",
-    excerpt: "Explore the latest trends shaping the web development landscape, from AI integration to new frameworks.",
+    slug: "grouping-activity",
+    title: "Grouping Microorganisms Actviity",
+    excerpt: "Help your students understand taxonomy, phylogeny and the differences between microorganisms.",
     content: `
       <p>Web development continues to evolve at a rapid pace, with new technologies and methodologies emerging regularly. As we move through 2024, several key trends are shaping how we build and deploy web applications.</p>
 
@@ -55,8 +55,8 @@ const blogPostsData: BlogPost[] = [
     date: "2024-06-15",
     readTime: "3 min read",
     category: "Class Activity",
-    image: "/grouping_crop.png?height=400&width=800",
-    tags: ["microbiology, activity"],
+    image: "/grouping_crop.png?height=400&width=1200",
+    tags: ["microbiology, classroom activity"],
     likes: 42,
     comments: 12,
   },
