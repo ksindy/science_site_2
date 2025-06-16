@@ -11,7 +11,7 @@ export function Footer() {
             <div className="space-y-2 text-slate-600">
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4" />
-                <span>sarah.chen@university.edu</span>
+                <span>karlysindy@abtech.edu</span>
               </div>
               <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4" />
@@ -39,7 +39,7 @@ export function Footer() {
             <h3 className="text-lg font-semibold text-slate-900 mb-4">Connect</h3>
             <div className="flex space-x-4">
               <Link
-                href="https://linkedin.com/in/sarahchen"
+                href="https://linkedin.com/in/karlysindy"
                 className="text-slate-600 hover:text-blue-600 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -47,7 +47,7 @@ export function Footer() {
                 <Linkedin className="h-6 w-6" />
               </Link>
               <Link
-                href="https://github.com/sarahchen"
+                href="https://github.com/karlysindy"
                 className="text-slate-600 hover:text-slate-900 transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -59,7 +59,7 @@ export function Footer() {
         </div>
 
         <div className="border-t mt-8 pt-8 text-center text-slate-600">
-          <p>&copy; 2024 Dr. Sarah Chen. All rights reserved.</p>
+          <p>&copy; 2025 Karly Sindy. All rights reserved.</p>
         </div>
       </div>
     </footer>
