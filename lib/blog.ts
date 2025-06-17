@@ -21,41 +21,15 @@ const blogPostsData: BlogPost[] = [
   {
     id: 1,
     slug: "grouping-activity",
-    title: "Grouping Microorganisms Actviity",
+    title: "Grouping Microorganisms Activity",
     excerpt: "Help your students understand taxonomy, phylogeny and the differences between microorganisms.",
-    content: `
-      <p>Web development continues to evolve at a rapid pace, with new technologies and methodologies emerging regularly. As we move through 2024, several key trends are shaping how we build and deploy web applications.</p>
-
-      <h2>1. AI Integration in Development</h2>
-      <p>Artificial Intelligence is no longer just a buzzword—it's becoming an integral part of the development process. From AI-powered code completion tools like GitHub Copilot to automated testing and bug detection, developers are leveraging AI to write better code faster.</p>
-
-      <p>Key areas where AI is making an impact:</p>
-      <ul>
-        <li>Code generation and completion</li>
-        <li>Automated testing and quality assurance</li>
-        <li>Performance optimization</li>
-        <li>User experience personalization</li>
-      </ul>
-
-      <h2>2. Server-Side Rendering Renaissance</h2>
-      <p>With frameworks like Next.js, Nuxt.js, and SvelteKit leading the charge, server-side rendering (SSR) is experiencing a renaissance. The benefits of improved SEO, faster initial page loads, and better user experience are driving adoption across the industry.</p>
-
-      <blockquote>
-        "The future of web development lies in finding the perfect balance between client-side interactivity and server-side performance." - Industry Expert
-      </blockquote>
-
-      <h2>3. Edge Computing and CDNs</h2>
-      <p>Edge computing is revolutionizing how we think about web application deployment. By moving computation closer to users, we can achieve unprecedented performance improvements and reduce latency significantly.</p>
-
-      <h2>Conclusion</h2>
-      <p>The web development landscape in 2024 is more exciting than ever. By staying informed about these trends and experimenting with new technologies, developers can build faster, more efficient, and more user-friendly applications.</p>
-    `,
+    content: "<p>This is a <strong>test</strong> paragraph with <em>HTML</em> content.</p>",
     author: "Karly Sindy",
     authorBio: "",
     date: "2024-06-15",
     readTime: "3 min read",
     category: "Class Activity",
-    image: "/grouping_crop.png?height=253&width=866",
+    image: "/grouping_crop.png",
     tags: ["microbiology, classroom activity"],
     likes: 42,
     comments: 12,
