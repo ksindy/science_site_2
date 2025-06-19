@@ -7,6 +7,16 @@ import Link from "next/link"
 export default function MicrobiologyClassPage() {
   const resources = [
     {
+      title: "Microbiology Milestones Activity",
+      type: "Activity",
+      size: "Interactive",
+      updated: "May 22, 2025",
+      category: "Activities",
+      description: "Timeline activity highlighting pioneers and their discoveries in microbiology.",
+      week: "Week 1",
+      link: "/microbiology-class/microbiology-milestones",
+    },
+    {
       title: "Grouping Microorganisms Activity",
       type: "Activity",
       size: "Interactive",
