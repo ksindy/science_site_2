@@ -41,13 +41,30 @@ export default function ActivityLandingPage() {
             hands-on sorting of microorganism cards.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700">
-              <Download className="mr-2 h-5 w-5" />
-              Download Activity PDF
+            <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700">
+              <a
+                href="/grouping_docs/microorganism_grouping_activity.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Activity PDF
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-50">
-              <Download className="mr-2 h-5 w-5" />
-              Download Card Cutouts
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-orange-600 text-orange-600 hover:bg-orange-50"
+            >
+              <a
+                href="/grouping_docs/grouping_activity_cards.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Download Card Cutouts
+              </a>
             </Button>
           </div>
         </div>
@@ -289,13 +306,30 @@ export default function ActivityLandingPage() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-orange-600 hover:bg-orange-700">
-              <Download className="mr-2 h-5 w-5" />
-              Complete Activity Guide (PDF)
+            <Button asChild size="lg" className="bg-orange-600 hover:bg-orange-700">
+              <a
+                href="/grouping_docs/microorganism_grouping_activity.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Complete Activity Guide (PDF)
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="border-orange-600 text-orange-600 hover:bg-orange-50">
-              <Download className="mr-2 h-5 w-5" />
-              Printable Card Cutouts (PDF)
+            <Button
+              asChild
+              size="lg"
+              variant="outline"
+              className="border-orange-600 text-orange-600 hover:bg-orange-50"
+            >
+              <a
+                href="/grouping_docs/grouping_activity_cards.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Download className="mr-2 h-5 w-5" />
+                Printable Card Cutouts (PDF)
+              </a>
             </Button>
           </div>
         </div>
