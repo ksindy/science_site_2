@@ -86,9 +86,9 @@ export default async function HomePage() {
                 </Card>
               ))}
             </div>
-          </div>
 
-          <div className="text-center">
+
+          <div className="txt-center">
             <Button asChild variant="outline">
               <Link href="/blog">View All Posts</Link>
             </Button>
