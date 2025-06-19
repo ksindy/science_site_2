@@ -26,7 +26,7 @@ export default function ActivityLandingPage() {
         <div className="text-center mb-12">
           <div className="mb-8">
             <Image
-              src="https://placehold.co/600x300?text=Grouping+Microorganisms"
+              src="/grouping_activity_img/grouping_crop.png"
               alt="Grouping Microorganisms Title"
               width={600}
               height={300}
@@ -65,7 +65,7 @@ export default function ActivityLandingPage() {
               </CardHeader>
               <CardContent>
                 <Image
-                  src="https://placehold.co/500x300?text=Card+Cutouts"
+                  src="/grouping_activity_img/card_cards.png"
                   alt="Microorganism card cutouts spread on table"
                   width={500}
                   height={300}
@@ -83,7 +83,7 @@ export default function ActivityLandingPage() {
               </CardHeader>
               <CardContent>
                 <Image
-                  src="https://placehold.co/500x300?text=Phylogenetic+Tree"
+                  src="/grouping_activity_img/phylo_cards.png"
                   alt="Phylogenetic tree activity with cards arranged in evolutionary order"
                   width={500}
                   height={300}
@@ -198,7 +198,7 @@ export default function ActivityLandingPage() {
                 </div>
                 <div className="mb-4">
                   <Image
-                    src="https://placehold.co/600x200?text=Size+Challenge"
+                    src="/grouping_activity_img/size_cards.png"
                     alt="Challenge 1 completed - microorganisms arranged by size from smallest to largest"
                     width={600}
                     height={200}
@@ -230,7 +230,7 @@ export default function ActivityLandingPage() {
                 </div>
                 <div className="mb-4">
                   <Image
-                    src="https://placehold.co/600x300?text=Components+Challenge"
+                    src="/grouping_activity_img/group_cards.png"
                     alt="Challenge 2 completed - organisms sorted into Akaryotes and Eukaryotes groups with single-cell markings"
                     width={600}
                     height={300}
@@ -262,7 +262,7 @@ export default function ActivityLandingPage() {
                 </div>
                 <div className="mb-4">
                   <Image
-                    src="https://placehold.co/600x400?text=Phylogenetic+Tree"
+                    src="/grouping_activity_img/pylo_cards.png"
                     alt="Challenge 3 completed - phylogenetic tree showing evolutionary relationships between organisms"
                     width={600}
                     height={400}
