@@ -83,7 +83,7 @@ export default function ActivityLandingPage() {
               </CardHeader>
               <CardContent>
                 <Image
-                  src="/grouping_docs/phylo_cards.png"
+                  src="/grouping_docs/phylo_cards.jpg"
                   alt="Phylogenetic tree activity with cards arranged in evolutionary order"
                   width={500}
                   height={300}
@@ -262,7 +262,7 @@ export default function ActivityLandingPage() {
                 </div>
                 <div className="mb-4">
                   <Image
-                    src="/grouping_docs/phylo_cards.png"
+                    src="/grouping_docs/phylo_cards.jpg"
                     alt="Challenge 3 completed - phylogenetic tree showing evolutionary relationships between organisms"
                     width={600}
                     height={400}
