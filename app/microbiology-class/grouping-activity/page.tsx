@@ -262,7 +262,7 @@ export default function ActivityLandingPage() {
                 </div>
                 <div className="mb-4">
                   <Image
-                    src="/grouping_activity_img/pylo_cards.png"
+                    src="/grouping_activity_img/phylo_cards.png"
                     alt="Challenge 3 completed - phylogenetic tree showing evolutionary relationships between organisms"
                     width={600}
                     height={400}
