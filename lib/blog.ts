@@ -29,7 +29,7 @@ const blogPostsData: BlogPost[] = [
     date: "2024-06-15",
     readTime: "3 min read",
     category: "Class Activity",
-    image: "/grouping_activity_docs/grouping_crop.png",
+    image: "/grouping_docs/grouping_crop.png",
     tags: ["microbiology, classroom activity"],
     likes: 42,
     comments: 12,
