@@ -2,9 +2,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Download, Calendar, Clock } from "lucide-react"
+import Link from "next/link"
 
 export default function MicrobiologyClassPage() {
   const resources = [
+    {
+      title: "Grouping Microorganisms Activity",
+      type: "Activity",
+      size: "Interactive",
+      updated: "May 21, 2025",
+      category: "Activities",
+      description:
+        "Hands-on classification activity exploring taxonomy and phylogeny using microorganism cards.",
+      week: "Week 2",
+      link: "/microbiology-class/grouping-activity",
+    },
     {
       title: "Lecture Slides - Bacterial Structure and Function",
       type: "PDF",
@@ -189,44 +201,55 @@ export default function MicrobiologyClassPage() {
 
         {/* Resources Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {resources.map((resource, index) => (
-            <Card key={index} className="hover:shadow-lg transition-shadow">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-2xl">{getFileIcon(resource.type)}</span>
-                    <div>
-                      <CardTitle className="text-lg leading-tight">{resource.title}</CardTitle>
-                      <div className="flex items-center gap-2 mt-1">
-                        <Badge variant="outline" size="sm">
-                          {resource.category}
-                        </Badge>
-                        <Badge variant="secondary" size="sm">
-                          {resource.week}
-                        </Badge>
+          {resources.map((resource, index) => {
+            const card = (
+              <Card key={index} className="hover:shadow-lg transition-shadow">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <div className="flex items-center space-x-2">
+                      <span className="text-2xl">{getFileIcon(resource.type)}</span>
+                      <div>
+                        <CardTitle className="text-lg leading-tight">{resource.title}</CardTitle>
+                        <div className="flex items-center gap-2 mt-1">
+                          <Badge variant="outline" size="sm">
+                            {resource.category}
+                          </Badge>
+                          <Badge variant="secondary" size="sm">
+                            {resource.week}
+                          </Badge>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div className="flex items-center justify-between text-sm text-slate-500 mt-2">
-                  <span>
-                    {resource.type} • {resource.size}
-                  </span>
-                  <div className="flex items-center">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {resource.updated}
+                  <div className="flex items-center justify-between text-sm text-slate-500 mt-2">
+                    <span>
+                      {resource.type} • {resource.size}
+                    </span>
+                    <div className="flex items-center">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {resource.updated}
+                    </div>
                   </div>
-                </div>
-              </CardHeader>
-              <CardContent>
-                <CardDescription className="text-slate-600 mb-4">{resource.description}</CardDescription>
-                <Button className="w-full" variant="outline">
-                  <Download className="h-4 w-4 mr-2" />
-                  Download
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-slate-600 mb-4">{resource.description}</CardDescription>
+                  {!resource.link && (
+                    <Button className="w-full" variant="outline">
+                      <Download className="h-4 w-4 mr-2" />
+                      Download
+                    </Button>
+                  )}
+                </CardContent>
+              </Card>
+            )
+            return resource.link ? (
+              <Link key={index} href={resource.link} className="block">
+                {card}
+              </Link>
+            ) : (
+              card
+            )
+          })}
         </div>
 
         {/* Additional Information */}
