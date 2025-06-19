@@ -1,11 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
+import { getRecentBlogPosts } from "@/lib/blog"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Calendar, Download, ExternalLink, FileText, FlaskConical, Users } from "lucide-react"
 
-export default function HomePage() {
+export default async function HomePage() {
+  const recentPosts = await getRecentBlogPosts(3)
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
@@ -61,49 +63,32 @@ export default function HomePage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {[
-              {
-                title: "Implementing Digital Lab Inventory Management",
-                date: "March 15, 2024",
-                excerpt:
-                  "How we reduced inventory errors by 85% through digital tracking systems and automated reorder protocols.",
-                image: "/placeholder.svg?height=200&width=300",
-              },
-              {
-                title: "Safety Protocol Updates for Biosafety Level 2 Labs",
-                date: "March 8, 2024",
-                excerpt:
-                  "Recent updates to BSL-2 safety protocols and their implementation in academic laboratory settings.",
-                image: "/placeholder.svg?height=200&width=300",
-              },
-              {
-                title: "Student Engagement in Microbiology Labs",
-                date: "February 28, 2024",
-                excerpt:
-                  "Innovative teaching methods that increased student participation and understanding in practical microbiology sessions.",
-                image: "/placeholder.svg?height=200&width=300",
-              },
-            ].map((post, index) => (
-              <Card key={index} className="hover:shadow-lg transition-shadow">
-                <div className="aspect-video relative overflow-hidden rounded-t-lg">
-                  <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
-                </div>
-                <CardHeader>
-                  <div className="flex items-center text-sm text-slate-500 mb-2">
-                    <Calendar className="h-4 w-4 mr-1" />
-                    {post.date}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+              {recentPosts.map((post) => (
+                <Card key={post.id} className="hover:shadow-lg transition-shadow">
+                  <div className="aspect-video relative overflow-hidden rounded-t-lg">
+                    <Image src={post.image || "/placeholder.svg"} alt={post.title} fill className="object-cover" />
                   </div>
-                  <CardTitle className="text-lg">{post.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-slate-600">{post.excerpt}</CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  <CardHeader>
+                    <div className="flex items-center text-sm text-slate-500 mb-2">
+                      <Calendar className="h-4 w-4 mr-1" />
+                      {new Date(post.date).toLocaleDateString("en-US", {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      })}
+                    </div>
+                    <CardTitle className="text-lg">{post.title}</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <CardDescription className="text-slate-600">{post.excerpt}</CardDescription>
+                  </CardContent>
+                </Card>
+              ))}
+            </div>
 
-          <div className="text-center">
+
+          <div className="txt-center">
             <Button asChild variant="outline">
               <Link href="/blog">View All Posts</Link>
             </Button>
